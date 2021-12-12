@@ -1,13 +1,31 @@
 (function ($) {
     'use strict'
 
+    if($('.navMain').length){
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navTop");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    }
+
 
     if ($('.banner-slid').length) {
         $('.banner-slid').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true,
-            focusOnSelect: true
+            infinite: false,
+            focusOnSelect: true,
+            prevArrow: '<button class="bi bi-chevron-left slide-arrow prev-arrow"></button>',
+            nextArrow: '<button class="bi bi-chevron-right slide-arrow next-arrow"></button>',
         });
     }
 
@@ -15,26 +33,29 @@
         $('.nieuws-slid').slick({
             dots: false,
             infinite: false,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
+            speed: 300, 
             prevArrow: '<button class="bi bi-chevron-left slide-arrow prev-arrow"></button>',
             nextArrow: '<button class="bi bi-chevron-right slide-arrow next-arrow"></button>',
             responsive: [
                 {
+                    breakpoint: 3000,
+                    settings: {
+                        slidesToShow: 3.1,
+                        slidesToScroll: 1, 
+                    }
+                },
+                {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
+                        slidesToShow: 2,
+                        slidesToScroll: 1, 
                     }
                 },
                 {
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 },
                 {
@@ -113,7 +134,47 @@
         });
     }
 
+    if ($('.inner-slider').length) {
+        $('.inner-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: false,
+            focusOnSelect: true,
+            prevArrow: false,
+            nextArrow: false,
+        });
+    }
 
+
+
+    if ($('#scroll-top').length) {
+        function scrollToTop() {
+            var $scrollUp = $('#scroll-top'),
+                $lastScrollTop = 0,
+                $window = $(window);
+
+            $window.on('scroll', function () {
+                var st = $(this).scrollTop();
+                if (st > $lastScrollTop) {
+                    $scrollUp.removeClass('show');
+                } else {
+                    if ($window.scrollTop() > 200) {
+                        $scrollUp.addClass('show');
+                    } else {
+                        $scrollUp.removeClass('show');
+                    }
+                }
+                $lastScrollTop = st;
+            });
+
+            $scrollUp.on('click', function (evt) {
+                $('html, body').animate({ scrollTop: 0 }, 600);
+                evt.preventDefault();
+            });
+        }
+        scrollToTop();
+    }
 
 
 

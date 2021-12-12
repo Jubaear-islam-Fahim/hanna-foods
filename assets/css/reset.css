@@ -15,7 +15,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit; 
+	font: inherit;  
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -43,6 +43,10 @@ table {
 
 a{
     text-decoration: none;
+}
+
+.h1,.h2,.h3,.h4,.h5,.h6{
+	margin-bottom: 0;
 }
 
 .pt-80{
