@@ -571,6 +571,9 @@ h2,
     width: 150px;
     height: 150px;
   }
+  .promo-item .h5 {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 700px) {
@@ -579,6 +582,7 @@ h2,
   .promo-item .promo-text {
     width: 90px;
     height: 90px;
+    padding: 5px;
   }
 }
 
@@ -898,6 +902,9 @@ h2,
   }
   .testimonial-area .dd-slid {
     width: 100%;
+  }
+  .testimonial-area .testimonial-slid .testimonial-item p {
+    font-size: 16px;
   }
 }
 
@@ -1293,10 +1300,9 @@ h2,
 }
 
 .waarom-foods-content .waarom-foods-list li {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 70px 1fr;
-      grid-template-columns: 70px 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 10px;
 }
 
@@ -1317,6 +1323,7 @@ h2,
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
+  padding: 0 20px;
 }
 
 .waarom-foods-content .waarom-foods-list .text .h5 {
@@ -1333,6 +1340,12 @@ h2,
   display: none;
 }
 
+.waarom-foods-list-right .number {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 @media (min-width: 320px) and (max-width: 991.98px) {
   .waarom-foods-content {
     -ms-grid-columns: 1fr 1fr;
@@ -1347,6 +1360,11 @@ h2,
   }
   .green-cups-img {
     display: none;
+  }
+  .waarom-foods-list-right .number {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
 }
 
@@ -1377,8 +1395,8 @@ h2,
 .product-list-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 25px;
   padding-top: 50px;
 }
@@ -1387,7 +1405,7 @@ h2,
   border-radius: 5px;
   border: solid 0.5px rgba(35, 31, 32, 0.5);
   background-color: #f8faf5;
-  padding: 30px;
+  padding: 30px 20px;
 }
 
 .product-list-content .product-list-item .img {
@@ -1786,9 +1804,16 @@ h2,
   font-size: 14px;
   font-weight: 500;
   padding-bottom: 10px;
+  color: var(--primary-color);
 }
 
 @media (min-width: 320px) and (max-width: 991.98px) {
+  .contact-footer-widget .footer-form {
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
   .contact-footer-widget .footer-form {
     padding-top: 50px;
   }
