@@ -913,7 +913,9 @@ h2,
     .testimonial-area .testimonial-dot {
         margin: 0px auto 50px;
     }
-    
+    .testimonial-area .testimonial-dot .slick-slide { 
+        // width: 100px !important;
+    }
 }
 
 // Ultieme
