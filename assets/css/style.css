@@ -86,6 +86,16 @@ h2,
   }
 }
 
+@media (min-width: 320px) and (max-width: 700px) {
+  .section-title .h2 {
+    font-size: 26px;
+  }
+  h2,
+  .h2 {
+    font-size: 26px;
+  }
+}
+
 .top-contact {
   margin-left: auto;
 }
@@ -599,6 +609,12 @@ h2,
 @media (min-width: 320px) and (max-width: 991.98px) {
   .inner-banner .promo-tt {
     bottom: -30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  .inner-banner .promo-tt {
+    bottom: 0px;
   }
 }
 
