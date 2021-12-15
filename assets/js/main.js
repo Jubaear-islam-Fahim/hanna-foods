@@ -115,22 +115,7 @@
             autoplaySpeed: 3000,
             prevArrow: '<button class="bi bi-chevron-left slide-arrow prev-arrow"></button>',
             nextArrow: '<button class="bi bi-chevron-right slide-arrow next-arrow"></button>',
-            responsive: [ 
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
+        
         });
     }
 
