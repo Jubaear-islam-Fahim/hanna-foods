@@ -2,20 +2,28 @@
     'use strict'
 
     if ($('.navMain').length) {
-        window.onscroll = function () {
-            myFunction()
-        };
+        // window.onscroll = function () {
+        //     myFunction()
+        // };
 
-        var navbar = document.getElementById("navTop");
-        var sticky = navbar.offsetTop;
+        // var navbar = document.getElementById("navTop");
+        // var sticky = navbar.offsetTop;
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
+        // function myFunction() {
+        //     if (window.pageYOffset >= sticky) {
+        //         navbar.classList.add("sticky")
+        //     } else {
+        //         navbar.classList.remove("sticky");
+        //     }
+        // }
+        $(window).on('scroll', function () {
+            var wScroll = $(this).scrollTop();
+            if (wScroll > 100) {
+                $('.navMain').addClass('sticky');
             } else {
-                navbar.classList.remove("sticky");
-            }
-        }
+                $('.navMain').removeClass('sticky');
+            };
+        });
     }
 
 
@@ -30,6 +38,7 @@
             autoplaySpeed: 3000,
             prevArrow: '<button class="bi bi-chevron-left slide-arrow prev-arrow"></button>',
             nextArrow: '<button class="bi bi-chevron-right slide-arrow next-arrow"></button>',
+            
         });
     }
 
@@ -102,7 +111,7 @@
             dots: false,
             centerMode: true,
             focusOnSelect: true,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             prevArrow: '<button class="bi bi-chevron-left slide-arrow prev-arrow"></button>',
             nextArrow: '<button class="bi bi-chevron-right slide-arrow next-arrow"></button>'
@@ -122,18 +131,18 @@
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToScroll: 1,
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 800,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 700,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1

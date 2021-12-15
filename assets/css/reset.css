@@ -60,4 +60,15 @@ a{
     padding-bottom: 80px;
 }
 
- 
+@media (min-width: 320px) and (max-width: 991.98px) {
+	.pt-80{
+		padding-top: 50px;
+	}
+	.pb-80{
+		padding-bottom: 50px;
+	}
+	.py-80{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}  
+}
