@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Hanna Foods Details</title>
+    <title>Hanna Foods contact</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -78,7 +78,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">Over ons</a>
@@ -98,7 +98,7 @@
                             <a href="blog.html" class="nav-link">Nieuws</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
+                            <a href="contact.html" class="nav-link active">Contact</a>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center gap-4">
@@ -116,89 +116,26 @@
         </div>
     </nav>
 
-    <!-- Inner Banner -->
-    <section class="inner-banner pt-4">
+
+    <div class="mapouter pt-3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="inner-slider">
-                        <div class="inner-item">
-                            <img src="assets/img/inner1.png" alt="">
-                        </div>
-                        <div class="inner-item">
-                            <img src="assets/img/inner2.png" alt="">
-                        </div>
-                        <div class="inner-item">
-                            <img src="assets/img/inner3.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <ul class="pageList">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Happy cow Cheese</a></li>
-                        <li><a class="active">Standard Tea Red</a></li>
-                    </ul>
+                    <iframe width="100%" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Hanna%20Foods,%20Zevenbergseweg,%20Berghem,%20Netherlands&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
-            <div class="promo-tt">
-                <div class="promo-item">
-                    <div class="promo-text">
-                        <div class="h5">Happy cow <br /> cheese</div>
-                    </div>
-                    <div class="promo-img">
-                        <img src="assets/img/cow.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="product-details-area pp-left py-80">
-        <div class="container"> 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="product-details-content">
-                        <div class="product-details-img">
-                            <img src="assets/img/details1.png" alt="">
-                        </div>
-                        <div class="product-details-text">
-                            <div class="h4">Standard Tea</div>
-                            <ul class="star">
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
-                            </ul>
-                            <div class="text">
-                                <p>Duis et aliquam orci. Vivamus augue quam, sollicitudin
-                                    <br/> quis bibendum quis, eleifend vitae velit.</p>
-                            </div>
-                            <ul class="det">
-                                <li>Loose Tea Pack</li>
-                                <li>1 x 24 x 500g</li>
-                                <li><span>Weight :</span> 500g</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            
-        </div>
+        </div> 
     </div>
-
 
     <!-- Footer -->
     <footer>
-        <div class="footer-widget py-80">
+        <div class="contact-footer-widget py-80">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
-                        <a href="index.html" class="footer-logo">
-                            <img src="assets/img/logo2.png" alt="">
-                        </a>
+                        <div class="h4">Contactgegevens </div>
                         <ul class="footer-det">
                             <li><i class="bi bi-geo-alt-fill"></i> Zevenbergseweg 33B 5351 PG <br /> Berghem Holland
                             </li>
@@ -206,19 +143,37 @@
                             <li><i class="bi bi-telephone-fill"></i> (office) +31 412 610 560</li>
                             <li><i class="bi bi-envelope-fill"></i> info@hannafoods.nl</li>
                         </ul>
+                        <ul class="social">
+                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                            <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#"><i class="bi bi-google "></i></a></li>
+                        </ul>
                     </div>
                     <div class="col-lg-7 offset-lg-1 col-md-8">
                         <div class="footer-form">
-                            <div class="h6">Neem contact met ons op</div>
+                            <div class="h4">Neem contact met ons op</div>
                             <form action="">
                                 <div class="form-content">
                                     <div class="left-f">
-                                        <input type="text" placeholder="Jouw Naam">
-                                        <input type="email" placeholder="E-mail">
-                                        <input type="text" placeholder="Onderwerp">
+                                        <div class="form-g">
+                                            <label for="name-box">Jouw Naam</label>
+                                            <input type="text" id="name-box">
+                                        </div>
+                                        <div class="form-g">
+                                            <label for="email-box">E-mail</label>
+                                            <input type="email" id="email-box">
+                                        </div>
+                                        <div class="form-g">
+                                            <label for="subj-box">Onderwerp</label>
+                                            <input type="text" id="subj-box">
+                                        </div> 
                                     </div>
                                     <div class="right-f">
-                                        <textarea placeholder="Uw bericht"></textarea>
+                                        <div class="form-g">
+                                            <label for="message-box">Onderwerp</label> 
+                                            <textarea id="message-box"></textarea>
+                                        </div> 
                                     </div>
                                 </div>
                                 <button type="submit" class="theme-btn">Verzend</button>
